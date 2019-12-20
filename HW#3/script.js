@@ -13,7 +13,6 @@ function reverse(str) {
    }  
    return result.join(' ');
 }
-
 //Task 5
 
 //Task 6
