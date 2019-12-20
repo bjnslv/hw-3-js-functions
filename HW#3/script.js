@@ -1,9 +1,38 @@
 //Task 1
+function splitAndMerge (str, sp) {
+    var result = '';
 
+    for (var i = 0; i < str.length; i++) {
+        result += str[i] + sp;
+    }
+    return result;
+}  
 //Task 2
+function convert (hash) {
+    var result = [];
+    var temp = [];
 
+    for(var i in (hash)) {
+        temp.push(i, hash[i]);
+        result.push(temp);
+    }
+return (result.sort());
+}
 //Task 3
-
+function toCamelCase(str){
+  var result = ""
+  for (var i=0; i<str.length; i++) {
+    if ( (str.charAt(i) == '-') || (str.charAt(i) == '_') ) {
+      i++
+      if (i < str.length) {
+        result += str.toUpperCase().charAt(i)
+      }
+    } else {
+      result += str.charAt(i)
+    }
+  }
+  return result
+}
 //Task 4
 function reverse(str) {
    var words = str.split(' ');
