@@ -59,7 +59,29 @@ function stringExpansion(str) {
     return result.join('');
 }
 //Task 6
+function largest () {
+  var args = Array.from(arguments);
+  var max = args[0];
 
+  for (var i = 0; i < args.length; i++) {
+    if (args[i] > max) {
+      max = args[i];
+    }
+  }
+  return max;
+}
+
+function smallest () {
+  var args = Array.from(arguments);
+  var min = args[0];
+
+  for (var i = 0; i < args.length; i++) {
+    if (args[i] < min) {
+      min = args[i];
+    }
+  }
+  return min;
+}
 //Task 7
 
 //Task 8
