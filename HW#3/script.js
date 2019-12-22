@@ -43,7 +43,21 @@ function reverse(str) {
    return result.join(' ');
 }
 //Task 5
+function stringExpansion(str) {
+    var splittedStr = str.split('');
+    var result = [];
+    var multiplier = 1;
 
+    for (var i = 0; i < splittedStr.length; i++) {
+      if (splittedStr[i] % 1 === 0) {
+        multiplier = +splittedStr[i];
+      }
+      else {
+        result.push(splittedStr[i].repeat(multiplier));
+      }
+    }
+    return result.join('');
+}
 //Task 6
 
 //Task 7
