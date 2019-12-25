@@ -83,6 +83,18 @@ function smallest () {
   return min;
 }
 //Task 7
+var baseArray = [10, 20, 30, 40, 50];
+var newArray = transform(baseArray);
+
+function transform(array) {
+
+  return baseArray.map(function(ndx) {
+    return function () {
+      return ndx;
+    }
+  })
+ }
+
 
 //Task 8
 
