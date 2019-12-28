@@ -94,7 +94,17 @@ function transform(array) {
 
 
 //Task 8
+function sum () {
+  var args = Array.from(arguments);
 
+  function sumOfArgs (args) {
+    if (args.length === 0) {
+      return 0;
+    }
+    return args[0] + sumOfArgs(args.slice(1));
+  }
+  return sumOfArgs(args);
+}
 //Task 9
 
 //Task 10
