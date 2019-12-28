@@ -106,5 +106,14 @@ function sum () {
   return sumOfArgs(args);
 }
 //Task 9
-
+function countDown (num) {
+  
+  setTimeout(function sec() {
+    console.log(num);
+    if (num > 0) {
+      setTimeout(sec, 1000);
+    }
+    num--;
+  }, 1000);
+}
 //Task 10
