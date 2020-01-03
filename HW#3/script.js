@@ -1,46 +1,46 @@
 //Task 1
-function splitAndMerge (str, sp) {
+function splitAndMerge(str, sp) {
     var result = '';
 
     for (var i = 0; i < str.length; i++) {
         result += str[i] + sp;
     }
     return result;
-}  
+}
 //Task 2
-function convert (hash) {
+function convert(hash) {
     var result = [];
     var temp = [];
 
-    for(var i in (hash)) {
+    for (var i in (hash)) {
         temp.push(i, hash[i]);
         result.push(temp);
     }
-return (result.sort());
+    return (result.sort());
 }
 //Task 3
-function toCamelCase(str){
-  var result = ""
-  for (var i=0; i<str.length; i++) {
-    if ( (str.charAt(i) == '-') || (str.charAt(i) == '_') ) {
-      i++
-      if (i < str.length) {
-        result += str.toUpperCase().charAt(i)
-      }
-    } else {
-      result += str.charAt(i)
+function toCamelCase(str) {
+    var result = "";
+    for (var i = 0; i < str.length; i++) {
+        if ((str.charAt(i) == '-') || (str.charAt(i) == '_')) {
+            i++;
+            if (i < str.length) {
+                result += str.toUpperCase().charAt(i)
+            }
+        } else {
+            result += str.charAt(i)
+        }
     }
-  }
-  return result
+    return result;
 }
 //Task 4
 function reverse(str) {
-   var words = str.split(' ');
-   var result = [];
-   for(var i = 0; i < words.length; i++){
-     result.push(words[i].split('').reverse().join(''));
-   }  
-   return result.join(' ');
+    var words = str.split(' ');
+    var result = [];
+    for (var i = 0; i < words.length; i++) {
+        result.push(words[i].split('').reverse().join(''));
+    }
+    return result.join(' ');
 }
 //Task 5
 function stringExpansion(str) {
@@ -49,71 +49,70 @@ function stringExpansion(str) {
     var multiplier = 1;
 
     for (var i = 0; i < splittedStr.length; i++) {
-      if (splittedStr[i] % 1 === 0) {
-        multiplier = +splittedStr[i];
-      }
-      else {
-        result.push(splittedStr[i].repeat(multiplier));
-      }
+        if (splittedStr[i] % 1 === 0) {
+            multiplier = +splittedStr[i];
+        } else {
+            result.push(splittedStr[i].repeat(multiplier));
+        }
     }
     return result.join('');
 }
 //Task 6
-function largest () {
-  var args = Array.from(arguments);
-  var max = args[0];
+function largest() {
+    var args = Array.from(arguments);
+    var max = args[0];
 
-  for (var i = 0; i < args.length; i++) {
-    if (args[i] > max) {
-      max = args[i];
+    for (var i = 0; i < args.length; i++) {
+        if (args[i] > max) {
+            max = args[i];
+        }
     }
-  }
-  return max;
+    return max;
 }
 
-function smallest () {
-  var args = Array.from(arguments);
-  var min = args[0];
+function smallest() {
+    var args = Array.from(arguments);
+    var min = args[0];
 
-  for (var i = 0; i < args.length; i++) {
-    if (args[i] < min) {
-      min = args[i];
+    for (var i = 0; i < args.length; i++) {
+        if (args[i] < min) {
+            min = args[i];
+        }
     }
-  }
-  return min;
+    return min;
 }
 //Task 7
 function transform(array) {
 
-  return baseArray.map(function(ndx) {
-    return function () {
-      return ndx;
-    }
-  })
- }
+    return baseArray.map(function (ndx) {
+        return function () {
+            return ndx;
+        }
+    })
+}
 
 
 //Task 8
-function sum () {
-  var args = Array.from(arguments);
+function sum() {
+    var args = Array.from(arguments);
 
-  function sumOfArgs (args) {
-    if (args.length === 0) {
-      return 0;
+    function sumOfArgs(args) {
+        if (args.length === 0) {
+            return 0;
+        }
+        return args[0] + sumOfArgs(args.slice(1));
     }
-    return args[0] + sumOfArgs(args.slice(1));
-  }
-  return sumOfArgs(args);
+    return sumOfArgs(args);
 }
 //Task 9
-function countDown (num) {
-  
-  setTimeout(function sec() {
-    console.log(num);
-    if (num > 0) {
-      setTimeout(sec, 1000);
-    }
-    num--;
-  }, 1000);
+function countDown(num) {
+
+    setTimeout(function sec() {
+        console.log(num);
+        if (num > 0) {
+            setTimeout(sec, 1000);
+        }
+        num--;
+    }, 1000);
 }
 //Task 10
