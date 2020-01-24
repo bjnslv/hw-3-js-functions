@@ -35,15 +35,14 @@ return result.join(" ");
 It is not as interesting as the first, but more appropriate*/
 
 //Task 2
-function convert(hash) {
-    var result = [];
-    var temp = [];
+function convert(hash){
+  var result = [];
 
-    for (var i in (hash)) {
-        temp.push(i, hash[i]);
-        result.push(temp);
-    }
-    return (result.sort());
+  for (var i in hash) {
+    result.push([i, hash[i]]);
+  }
+  
+  return result;
 }
 //Task 3
 function toCamelCase(str) {
