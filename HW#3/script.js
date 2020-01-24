@@ -85,7 +85,7 @@ function stringExpansion(str) {
 }
 //Task 6
 function largest() {
-    var args = Array.from(arguments);
+    var args = [].slice.call(arguments);
     var max = args[0];
 
     for (var i = 0; i < args.length; i++) {
@@ -97,7 +97,7 @@ function largest() {
 }
 
 function smallest() {
-    var args = Array.from(arguments);
+    var args = [].slice.call(arguments);
     var min = args[0];
 
     for (var i = 0; i < args.length; i++) {
@@ -120,7 +120,7 @@ function transform(array) {
 
 //Task 8
 function sum() {
-    var args = Array.from(arguments);
+    var args = [].slice.call(arguments);
 
     function sumOfArgs(args) {
         if (args.length === 0) {
