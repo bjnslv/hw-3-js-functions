@@ -1,12 +1,39 @@
 //Task 1
 function splitAndMerge(str, sp) {
-    var result = '';
+  var result = '';
 
-    for (var i = 0; i < str.length; i++) {
-        result += str[i] + sp;
-    }
-    return result;
+  for (var i = 0; i < str.length; i++) {
+      if (str[i] === ' ') {
+        continue;
+      }
+      result += str[i] + sp;
+  }
+  return result.slice(0, result.length - 1);
 }
+console.log(splitAndMerge('Hello World!', '-'));
+/*At the time of fixing this problem, 
+I realized that the choice of "for" cycle was not the most far-sighted,
+but decided to finish this decision.
+I understand that it looks like a frankstein monster, 
+but it was important to me)))))*/
+
+function splitAndMerge (str, sp) {
+var result = str.split(" ");  
+
+for (var i in result) {
+  result[i] = result[i].split(""); 
+ }
+
+ for (var i in result) {
+  result[i] = result[i].join(sp); 
+ }
+
+return result.join(" "); 
+}
+
+/*I decided to add a more concise solution. 
+It is not as interesting as the first, but more appropriate*/
+
 //Task 2
 function convert(hash) {
     var result = [];
