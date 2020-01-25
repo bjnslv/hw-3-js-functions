@@ -142,3 +142,17 @@ function countDown(num) {
     }, 1000);
 }
 //Task 10
+Function.prototype.myBind = function (newThis) {
+    var bindThis = this;
+    return function () {
+        return bindThis.apply(newThis, arguments)
+    };
+}
+
+function addPropToNumber(number) {
+    return this.prop + number;
+}
+var bound = addPropToNumber.myBind({
+    prop: 9
+});
+console.log(bound('411'));
